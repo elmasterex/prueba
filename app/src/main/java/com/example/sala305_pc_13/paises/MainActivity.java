@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.sala305_pc_13.paises.WebService.Asynchtask;
-import com.example.sala305_pc_13.paises.WebService.Paises;
+import com.example.sala305_pc_13.paises.clases.Paises;
 import com.example.sala305_pc_13.paises.WebService.WebService;
 import com.example.sala305_pc_13.paises.adaptadores.AdaptadorPaises;
 
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements Asynchtask {
 
         enviar();
 
+        View header = getLayoutInflater().inflate(R.layout.encabezadopaises, null);
+        listaView.addHeaderView(header);
         listaView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements Asynchtask {
                 startActivity(intent);
             }
         });
+
+
 
 
     }

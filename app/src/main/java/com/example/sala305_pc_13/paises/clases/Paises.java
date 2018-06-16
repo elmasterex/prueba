@@ -1,4 +1,4 @@
-package com.example.sala305_pc_13.paises.WebService;
+package com.example.sala305_pc_13.paises.clases;
 
 import org.json.JSONArray;
 import org.json.JSONException;
